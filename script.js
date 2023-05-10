@@ -45,7 +45,7 @@ function playRound(playerSelection, computerSelection) {
         }
         console.log(`User: ${userPoints} Computer: ${computerPoints}`);
   }
-  let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
+  let playerSelection = getComputerChoice();
   const computerSelection = getComputerChoice();
   let userPoints = 0;
   let computerPoints = 0;
@@ -54,9 +54,9 @@ function playRound(playerSelection, computerSelection) {
       game();
       if(userPoints === 5){
           console.log('You won the game!');
-        }else if(computerPoints === 5){
+      }else if(computerPoints === 5){
             console.log('You lost the game!');
         }
-      playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
+    playerSelection = getComputerChoice();
   }
 
